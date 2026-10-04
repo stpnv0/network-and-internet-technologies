@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Крупнейшие города мира - рейтинг 2025</title>
+</head>
+<body>
+    <h1 align="center">Крупнейшие города мира</h1>
+    <p><a href="index.html">Главная</a></p>
+    <p><a href="guangzhou.html">Подробно о Гуанчжоу-Шэньчжэне</a></p>
+    <h2><a href="data.html">Таблица рейтинга и формы</a></h2>
+    <hr>
+
+    <p>
+        Ниже приведены первые 50 городских территорий из рейтинга Demographia World Urban Areas за 2025 год.
+        Таблица содержит оценку населения, площадь застроенной территории и плотность населения.
+    </p>
+
+    <details>
+        <summary>График</summary>
+        <form>
+            <p><b>Значение по оси OX</b></p>
+            <p>
+                <label>
+                    <input type="radio" name="x-axis" value="urban-area" checked>
+                    Городская территория
+                </label><br>
+                <label>
+                    <input type="radio" name="x-axis" value="country">
+                    Страна
+                </label><br>
+                <label>
+                    <input type="radio" name="x-axis" value="region">
+                    Регион
+                </label>
+            </p>
+            <p><b>Значение по оси OY</b></p>
+            <p>
+                <label>
+                    <input type="checkbox" name="y-value" value="population" checked>
+                    Население, человек
+                </label><br>
+                <label>
+                    <input type="checkbox" name="y-value" value="area">
+                    Площадь застроенной территории, км²
+                </label><br>
+                <label>
+                    <input type="checkbox" name="y-value" value="density">
+                    Плотность, человек на км²
+                </label>
+            </p>
+            <p><input type="submit" value="Построить"></p>
+        </form>
+    </details>
+
+    <details>
+        <summary>Фильтр</summary>
+        <form>
+            <p>
+                <label>
+                    Городская территория:
+                    <input type="text" name="urban-area" size="30">
+                </label>
+            </p>
+            <p>
+                <label>
+                    Страна:
+                    <input type="text" name="country" size="24">
+                </label>
+            </p>
+            <p>
+                <label>
+                    Регион:
+                    <select name="region">
+                        <option value="any" selected>Любой</option>
+                        <option value="asia">Азия</option>
+                        <option value="africa">Африка</option>
+                        <option value="europe">Европа</option>
+                        <option value="north-america">Северная Америка</option>
+                        <option value="south-america">Южная Америка</option>
+                    </select>
+                </label>
+            </p>
+            <p>
+                Место в рейтинге:
+                <label>
+                    с
+                    <input type="number" name="rank-min" min="1" max="50">
+                </label>
+                <label>
+                    по
+                    <input type="number" name="rank-max" min="1" max="50">
+                </label>
+            </p>
+            <p>
+                Население, человек:
+                <label>
+                    от
+                    <input type="number" name="population-min" min="1" max="70000000">
+                </label>
+                <label>
+                    до
+                    <input type="number" name="population-max" min="1" max="70000000">
+                </label>
+            </p>
+            <p>
+                Площадь застроенной территории, км²:
+                <label>
+                    от
+                    <input type="number" name="area-min" min="1" max="15000">
+                </label>
+                <label>
+                    до
+                    <input type="number" name="area-max" min="1" max="15000">
+                </label>
+            </p>
+            <p>
+                Плотность, человек на км²:
+                <label>
+                    от
+                    <input type="number" name="density-min" min="1" max="70000">
+                </label>
+                <label>
+                    до
+                    <input type="number" name="density-max" min="1" max="70000">
+                </label>
+            </p>
+            <p><input type="submit" value="Найти"></p>
+        </form>
+    </details>
+
+    <details>
+        <summary>Сортировка</summary>
+        <form>
+            <p>
+                <label>
+                    Первый уровень:
+                    <select name="sort-one">
+                        <option value="none">Нет</option>
+                        <option value="urban-area">Городская территория</option>
+                        <option value="country">Страна</option>
+                        <option value="region">Регион</option>
+                        <option value="rank">Место в рейтинге</option>
+                        <option value="population">Население</option>
+                        <option value="area">Площадь застроенной территории</option>
+                        <option value="density">Плотность населения</option>
+                    </select>
+                </label>
+                <label>
+                    <input type="checkbox" name="descending-one" value="yes">
+                    по убыванию?
+                </label>
+            </p>
+            <p>
+                <label>
+                    Второй уровень:
+                    <select name="sort-two">
+                        <option value="none">Нет</option>
+                        <option value="urban-area">Городская территория</option>
+                        <option value="country">Страна</option>
+                        <option value="region">Регион</option>
+                        <option value="rank">Место в рейтинге</option>
+                        <option value="population">Население</option>
+                        <option value="area">Площадь застроенной территории</option>
+                        <option value="density">Плотность населения</option>
+                    </select>
+                </label>
+                <label>
+                    <input type="checkbox" name="descending-two" value="yes">
+                    по убыванию?
+                </label>
+            </p>
+            <p>
+                <label>
+                    Третий уровень:
+                    <select name="sort-three">
+                        <option value="none">Нет</option>
+                        <option value="rank">Место в рейтинге</option>
+                        <option value="urban-area">Городская территория</option>
+                        <option value="country">Страна</option>
+                        <option value="region">Регион</option>
+                        <option value="population">Население</option>
+                        <option value="area">Площадь застроенной территории</option>
+                        <option value="density">Плотность населения</option>
+                    </select>
+                </label>
+                <label>
+                    <input type="checkbox" name="descending-three" value="yes">
+                    по убыванию?
+                </label>
+            </p>
+            <p><input type="submit" value="Сортировать"></p>
+        </form>
+    </details>
+
+    <h2>Таблица рейтинга</h2>
+    <p>50 крупнейших городских территорий по оценке Demographia за 2025 год.</p>
+    <table border="1" cellpadding="4">
+        <thead>
+            <tr>
+                <th>Место</th>
+                <th>Городская территория</th>
+                <th>Страна</th>
+                <th>Регион</th>
+                <th>Население, человек</th>
+                <th>Площадь застроенной территории, км²</th>
+                <th>Плотность, человек на км²</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>Гуанчжоу-Шэньчжэнь</td><td>Китай</td><td>Азия</td><td>69562000</td><td>10635</td><td>6541</td></tr>
+            <tr><td>2</td><td>Шанхай-Чанчжоу</td><td>Китай</td><td>Азия</td><td>45115000</td><td>9731</td><td>4636</td></tr>
+            <tr><td>3</td><td>Токио-Йокогама</td><td>Япония</td><td>Азия</td><td>37325000</td><td>8775</td><td>4254</td></tr>
+            <tr><td>4</td><td>Джакарта</td><td>Индонезия</td><td>Азия</td><td>36877000</td><td>3546</td><td>10400</td></tr>
+            <tr><td>5</td><td>Дели</td><td>Индия</td><td>Азия</td><td>33224000</td><td>2344</td><td>14174</td></tr>
+            <tr><td>6</td><td>Мумбаи</td><td>Индия</td><td>Азия</td><td>26237000</td><td>1067</td><td>24588</td></tr>
+            <tr><td>7</td><td>Манила</td><td>Филиппины</td><td>Азия</td><td>25521000</td><td>1911</td><td>13352</td></tr>
+            <tr><td>8</td><td>Дакка</td><td>Бангладеш</td><td>Азия</td><td>25305000</td><td>1083</td><td>23374</td></tr>
+            <tr><td>9</td><td>Сеул-Инчхон</td><td>Южная Корея</td><td>Азия</td><td>23825000</td><td>2769</td><td>8605</td></tr>
+            <tr><td>10</td><td>Каир</td><td>Египет</td><td>Африка</td><td>22684000</td><td>2696</td><td>8413</td></tr>
+            <tr><td>11</td><td>Пекин</td><td>Китай</td><td>Азия</td><td>22363000</td><td>4284</td><td>5220</td></tr>
+            <tr><td>12</td><td>Сан-Паулу</td><td>Бразилия</td><td>Южная Америка</td><td>21747000</td><td>3649</td><td>5959</td></tr>
+            <tr><td>13</td><td>Карачи</td><td>Пакистан</td><td>Азия</td><td>21258000</td><td>1124</td><td>18912</td></tr>
+            <tr><td>14</td><td>Нью-Йорк</td><td>США</td><td>Северная Америка</td><td>20892000</td><td>11344</td><td>1842</td></tr>
+            <tr><td>15</td><td>Калькутта</td><td>Индия</td><td>Азия</td><td>20327000</td><td>1352</td><td>15035</td></tr>
+            <tr><td>16</td><td>Бангкок</td><td>Таиланд</td><td>Азия</td><td>20284000</td><td>3199</td><td>6341</td></tr>
+            <tr><td>17</td><td>Мехико</td><td>Мексика</td><td>Северная Америка</td><td>18942000</td><td>2530</td><td>7486</td></tr>
+            <tr><td>18</td><td>Москва</td><td>Россия</td><td>Европа</td><td>18509000</td><td>6643</td><td>2786</td></tr>
+            <tr><td>19</td><td>Бангалор</td><td>Индия</td><td>Азия</td><td>16216000</td><td>1743</td><td>9303</td></tr>
+            <tr><td>20</td><td>Хошимин</td><td>Вьетнам</td><td>Азия</td><td>16024000</td><td>2274</td><td>7047</td></tr>
+            <tr><td>21</td><td>Буэнос-Айрес</td><td>Аргентина</td><td>Южная Америка</td><td>15933000</td><td>3437</td><td>4636</td></tr>
+            <tr><td>22</td><td>Лос-Анджелес</td><td>США</td><td>Северная Америка</td><td>15582000</td><td>6918</td><td>2252</td></tr>
+            <tr><td>23</td><td>Лагос</td><td>Нигерия</td><td>Африка</td><td>15283000</td><td>2585</td><td>5913</td></tr>
+            <tr><td>24</td><td>Йоханнесбург-Претория</td><td>ЮАР</td><td>Африка</td><td>15026000</td><td>4040</td><td>3719</td></tr>
+            <tr><td>25</td><td>Осака-Кобе-Киото</td><td>Япония</td><td>Азия</td><td>14998000</td><td>3020</td><td>4966</td></tr>
+            <tr><td>26</td><td>Стамбул</td><td>Турция</td><td>Азия</td><td>14749000</td><td>1471</td><td>10026</td></tr>
+            <tr><td>27</td><td>Лахор</td><td>Пакистан</td><td>Азия</td><td>14256000</td><td>945</td><td>15080</td></tr>
+            <tr><td>28</td><td>Тегеран</td><td>Иран</td><td>Азия</td><td>14137000</td><td>1704</td><td>8295</td></tr>
+            <tr><td>29</td><td>Киншаса</td><td>ДР Конго</td><td>Африка</td><td>13060000</td><td>518</td><td>25212</td></tr>
+            <tr><td>30</td><td>Рио-де-Жанейро</td><td>Бразилия</td><td>Южная Америка</td><td>12546000</td><td>2020</td><td>6210</td></tr>
+            <tr><td>31</td><td>Ханчжоу-Шаосин</td><td>Китай</td><td>Азия</td><td>12422000</td><td>1344</td><td>9241</td></tr>
+            <tr><td>32</td><td>Шаньтоу-Цзеян</td><td>Китай</td><td>Азия</td><td>12187000</td><td>2528</td><td>4821</td></tr>
+            <tr><td>33</td><td>Тяньцзинь</td><td>Китай</td><td>Азия</td><td>12095000</td><td>2813</td><td>4300</td></tr>
+            <tr><td>34</td><td>Ченнаи</td><td>Индия</td><td>Азия</td><td>11950000</td><td>1225</td><td>9755</td></tr>
+            <tr><td>35</td><td>Луанда</td><td>Ангола</td><td>Африка</td><td>11892000</td><td>1005</td><td>11834</td></tr>
+            <tr><td>36</td><td>Чунцин</td><td>Китай</td><td>Азия</td><td>11524000</td><td>1580</td><td>7294</td></tr>
+            <tr><td>37</td><td>Лондон</td><td>Великобритания</td><td>Европа</td><td>11360000</td><td>1738</td><td>6537</td></tr>
+            <tr><td>38</td><td>Париж</td><td>Франция</td><td>Европа</td><td>11282000</td><td>2854</td><td>3953</td></tr>
+            <tr><td>39</td><td>Лима</td><td>Перу</td><td>Южная Америка</td><td>10914000</td><td>891</td><td>12250</td></tr>
+            <tr><td>40</td><td>Богота</td><td>Колумбия</td><td>Южная Америка</td><td>10734000</td><td>562</td><td>19099</td></tr>
+            <tr><td>41</td><td>Хайдарабад</td><td>Индия</td><td>Азия</td><td>10101000</td><td>1689</td><td>5982</td></tr>
+            <tr><td>42</td><td>Ухань</td><td>Китай</td><td>Азия</td><td>10041000</td><td>1821</td><td>5515</td></tr>
+            <tr><td>43</td><td>Куала-Лумпур</td><td>Малайзия</td><td>Азия</td><td>9899000</td><td>2163</td><td>4577</td></tr>
+            <tr><td>44</td><td>Тайбэй</td><td>Тайвань (Китай)</td><td>Азия</td><td>9866000</td><td>1090</td><td>9048</td></tr>
+            <tr><td>45</td><td>Нагоя</td><td>Япония</td><td>Азия</td><td>9617000</td><td>3704</td><td>2597</td></tr>
+            <tr><td>46</td><td>Нанкин</td><td>Китай</td><td>Азия</td><td>8929000</td><td>1614</td><td>5534</td></tr>
+            <tr><td>47</td><td>Дар-эс-Салам</td><td>Танзания</td><td>Африка</td><td>8877000</td><td>961</td><td>9238</td></tr>
+            <tr><td>48</td><td>Чикаго</td><td>США</td><td>Северная Америка</td><td>8790000</td><td>6532</td><td>1346</td></tr>
+            <tr><td>49</td><td>Эр-Рияд</td><td>Саудовская Аравия</td><td>Азия</td><td>8589000</td><td>1673</td><td>5133</td></tr>
+            <tr><td>50</td><td>Сиань</td><td>Китай</td><td>Азия</td><td>8312000</td><td>1826</td><td>4552</td></tr>
+        </tbody>
+    </table>
+    <p>Источник: <a href="https://www.demographia.com/db-worldua.pdf">Demographia World Urban Areas, 2025, раздел Schedule 2</a>.</p>
+
+    <hr>
+    <footer>
+        <p>Группа: Б9124-09.03.04 Студент: Степанов Дмитрий</p>
+        <p><a href="index.html">На главную страницу</a></p>
+    </footer>
+</body>
+</html>
