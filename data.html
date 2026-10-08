@@ -22,34 +22,34 @@
             <p><b>Значение по оси OX</b></p>
             <p>
                 <label>
-                    <input type="radio" name="x-axis" value="urban-area" checked>
+                    <input type="radio" name="x_axis" id="x_area" value="urban-area" checked>
                     Городская территория
                 </label><br>
                 <label>
-                    <input type="radio" name="x-axis" value="country">
+                    <input type="radio" name="x_axis" id="x_country" value="country">
                     Страна
                 </label><br>
                 <label>
-                    <input type="radio" name="x-axis" value="region">
+                    <input type="radio" name="x_axis" id="x_region" value="region">
                     Регион
                 </label>
             </p>
-            <p><b>Значение по оси OY</b></p>
+            <p><b>Значение по оси OY — население, человек</b></p>
             <p>
                 <label>
-                    <input type="checkbox" name="y-value" value="population" checked>
-                    Население, человек
+                    <input type="checkbox" name="y_value" id="y_population_max" value="population_max" checked>
+                    Максимальное население, человек
                 </label><br>
                 <label>
-                    <input type="checkbox" name="y-value" value="area">
-                    Площадь застроенной территории, км²
+                    <input type="checkbox" name="y_value" id="y_population_min" value="population_min">
+                    Минимальное население, человек
                 </label><br>
                 <label>
-                    <input type="checkbox" name="y-value" value="density">
-                    Плотность, человек на км²
+                    <input type="checkbox" name="y_value" id="y_population_avg" value="population_avg">
+                    Среднее население, человек
                 </label>
             </p>
-            <p><input type="submit" value="Построить"></p>
+            <p><input type="button" value="Построить"></p>
         </form>
     </details>
 
@@ -59,19 +59,19 @@
             <p>
                 <label>
                     Городская территория:
-                    <input type="text" name="urban-area" size="30">
+                    <input type="text" name="urban_area" id="filter_area" size="30">
                 </label>
             </p>
             <p>
                 <label>
                     Страна:
-                    <input type="text" name="country" size="24">
+                    <input type="text" name="country" id="filter_country" size="24">
                 </label>
             </p>
             <p>
                 <label>
                     Регион:
-                    <select name="region">
+                    <select name="region" id="filter_region">
                         <option value="any" selected>Любой</option>
                         <option value="asia">Азия</option>
                         <option value="africa">Африка</option>
@@ -85,47 +85,47 @@
                 Место в рейтинге:
                 <label>
                     с
-                    <input type="number" name="rank-min" min="1" max="50">
+                    <input type="number" name="rank_min" id="rank_min" min="1" max="50">
                 </label>
                 <label>
                     по
-                    <input type="number" name="rank-max" min="1" max="50">
+                    <input type="number" name="rank_max" id="rank_max" min="1" max="50">
                 </label>
             </p>
             <p>
                 Население, человек:
                 <label>
                     от
-                    <input type="number" name="population-min" min="1" max="70000000">
+                    <input type="number" name="population_min" id="population_min" min="1" max="70000000">
                 </label>
                 <label>
                     до
-                    <input type="number" name="population-max" min="1" max="70000000">
+                    <input type="number" name="population_max" id="population_max" min="1" max="70000000">
                 </label>
             </p>
             <p>
                 Площадь застроенной территории, км²:
                 <label>
                     от
-                    <input type="number" name="area-min" min="1" max="15000">
+                    <input type="number" name="area_min" id="area_min" min="1" max="15000">
                 </label>
                 <label>
                     до
-                    <input type="number" name="area-max" min="1" max="15000">
+                    <input type="number" name="area_max" id="area_max" min="1" max="15000">
                 </label>
             </p>
             <p>
                 Плотность, человек на км²:
                 <label>
                     от
-                    <input type="number" name="density-min" min="1" max="70000">
+                    <input type="number" name="density_min" id="density_min" min="1" max="70000">
                 </label>
                 <label>
                     до
-                    <input type="number" name="density-max" min="1" max="70000">
+                    <input type="number" name="density_max" id="density_max" min="1" max="70000">
                 </label>
             </p>
-            <p><input type="submit" value="Найти"></p>
+            <p><input type="button" value="Найти"></p>
         </form>
     </details>
 
@@ -135,7 +135,7 @@
             <p>
                 <label>
                     Первый уровень:
-                    <select name="sort-one">
+                    <select name="sort_one" id="sort_one">
                         <option value="none">Нет</option>
                         <option value="urban-area">Городская территория</option>
                         <option value="country">Страна</option>
@@ -147,14 +147,14 @@
                     </select>
                 </label>
                 <label>
-                    <input type="checkbox" name="descending-one" value="yes">
+                    <input type="checkbox" name="descending_one" id="descending_one" value="yes">
                     по убыванию?
                 </label>
             </p>
             <p>
                 <label>
                     Второй уровень:
-                    <select name="sort-two">
+                    <select name="sort_two" id="sort_two">
                         <option value="none">Нет</option>
                         <option value="urban-area">Городская территория</option>
                         <option value="country">Страна</option>
@@ -166,14 +166,14 @@
                     </select>
                 </label>
                 <label>
-                    <input type="checkbox" name="descending-two" value="yes">
+                    <input type="checkbox" name="descending_two" id="descending_two" value="yes">
                     по убыванию?
                 </label>
             </p>
             <p>
                 <label>
                     Третий уровень:
-                    <select name="sort-three">
+                    <select name="sort_three" id="sort_three">
                         <option value="none">Нет</option>
                         <option value="rank">Место в рейтинге</option>
                         <option value="urban-area">Городская территория</option>
@@ -185,11 +185,11 @@
                     </select>
                 </label>
                 <label>
-                    <input type="checkbox" name="descending-three" value="yes">
+                    <input type="checkbox" name="descending_three" id="descending_three" value="yes">
                     по убыванию?
                 </label>
             </p>
-            <p><input type="submit" value="Сортировать"></p>
+            <p><input type="button" value="Сортировать"></p>
         </form>
     </details>
 
