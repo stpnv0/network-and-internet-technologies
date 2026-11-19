@@ -1,87 +1,169 @@
 <!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Крупнейшие города мира</title>
-    <link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
-    <header class="header">
-        <h1 class="logo">Крупнейшие города мира</h1>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Крупнейшие города мира</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <header class="bg-primary text-white p-2">
+            <h1 class="h5 mb-0">Крупнейшие города мира</h1>
+        </header>
 
-    <nav class="menu">
-        <a class="link active" href="#gallery">Главная</a>
-        <a class="link" href="#gallery">Галерея</a>
-        <a class="link" href="guangzhou.html">Гуанчжоу</a>
-        <a class="link" href="data.html">Рейтинг</a>
-    </nav>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <div class="container-fluid">
+                <button
+                    class="navbar-toggler ms-auto"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainMenu"
+                    aria-controls="mainMenu"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    <main>
-        <div class="gallery" id="gallery">
-            <a class="item" href="guangzhou.html">
-                <img src="images/guangzhou.jpg" alt="Панорама Гуанчжоу">
-            </a>
-            <a class="item wide" href="shanghai.html">
-                <img src="images/shanghai.jpg" alt="Панорама Шанхая">
-            </a>
-            <a class="item wide" href="tokyo.html">
-                <img src="images/tokyo.jpg" alt="Панорама Токио">
-            </a>
-            <a class="item" href="manila.html">
-                <img src="images/manila.jpg" alt="Панорама Манилы">
-            </a>
-        </div>
+                <div class="collapse navbar-collapse" id="mainMenu">
+                    <ul class="navbar-nav ms-auto text-end">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery">Галерея</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="guangzhou.html">Гуанчжоу</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="data.html">Рейтинг</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main class="container-fluid">
+            <div class="row justify-content-center mb-3">
+                <div class="col-12 col-sm-11">
+                    <div class="row g-1" id="gallery">
+                        <a class="col-12 col-sm-4" href="guangzhou.html">
+                            <img class="w-100 h-100 object-fit-cover" src="images/guangzhou.jpg" alt="Панорама Гуанчжоу">
+                        </a>
+                        <a class="col-12 col-sm-8" href="shanghai.html">
+                            <img class="w-100 h-100 object-fit-cover" src="images/shanghai.jpg" alt="Панорама Шанхая">
+                        </a>
+                        <a class="col-12 col-sm-8" href="tokyo.html">
+                            <img class="w-100 h-100 object-fit-cover" src="images/tokyo.jpg" alt="Панорама Токио">
+                        </a>
+                        <a class="col-12 col-sm-4" href="manila.html">
+                            <img class="w-100 h-100 object-fit-cover" src="images/manila.jpg" alt="Панорама Манилы">
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-        <div class="cards">
-            <div class="card">
-                <img src="images/tokyo.jpg" alt="Панорама Токио">
-                <b>Шанхай</b>
-                <span class="text">Порт и финансовый центр в дельте Янцзы. <a href="shanghai.html">Подробнее</a></span>
+            <div class="row justify-content-center mb-3">
+                <div class="col-12 col-sm-10">
+                    <div class="row justify-content-between g-3">
+                        <div class="col-12 col-sm-3 col-xl-2">
+                            <div class="card h-100 rounded-0 text-center p-2">
+                                <div class="col-12 col-sm-6 mx-auto mb-2">
+                                    <img class="w-100" src="images/tokyo.jpg" alt="Панорама Токио">
+                                </div>
+                                <h2 class="h6 mb-1">Токио</h2>
+                                <p class="card-text small">
+                                    Столица Японии на острове Хонсю.
+                                    <a href="tokyo.html">Подробнее</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-3 col-xl-2">
+                            <div class="card h-100 rounded-0 text-center p-2">
+                                <div class="col-12 col-sm-6 mx-auto mb-2">
+                                    <img class="w-100" src="images/shanghai.jpg" alt="Панорама Шанхая">
+                                </div>
+                                <h2 class="h6 mb-1">Шанхай</h2>
+                                <p class="card-text small">
+                                    Порт и финансовый центр в дельте Янцзы.
+                                    <a href="shanghai.html">Подробнее</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-3 col-xl-2">
+                            <div class="card h-100 rounded-0 text-center p-2">
+                                <div class="col-12 col-sm-6 mx-auto mb-2">
+                                    <img class="w-100" src="images/jakarta.jpg" alt="Панорама Джакарты">
+                                </div>
+                                <h2 class="h6 mb-1">Джакарта</h2>
+                                <p class="card-text small">
+                                    Крупный город на острове Ява.
+                                    <a href="jakarta.html">Подробнее</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <img src="images/shanghai.jpg" alt="Панорама Шанхая">
-                <b>Шанхай</b>
-                <span class="text">Порт и финансовый центр в дельте Янцзы. <a href="shanghai.html">Подробнее</a></span>
-            </div>
-            <div class="card">
-                <img src="images/jakarta.jpg" alt="Панорама Джакарты">
-                <b>Шанхай</b>
-                <span class="text">Порт и финансовый центр в дельте Янцзы. <a href="shanghai.html">Подробнее</a></span>
-            </div>
-        </div>
 
-        <div class="feature">
-            <img src="images/guangzhou.jpg" alt="Городская застройка Гуанчжоу">
-            <span class="title">Гуанчжоу — город в дельте Жемчужной реки</span>
-            <span class="text">Гуанчжоу — крупный торговый и промышленный центр на юге Китая. Жилые кварталы, транспортные узлы и предприятия связывают его с соседними городами дельты Жемчужной реки и Шэньчжэнем.
-            В рейтинге Demographia World Urban Areas за 2025 год объединённая территория Гуанчжоу-Шэньчжэнь занимает первое место: здесь живут 69 562 000 человек. Это население всей застроенной территории, а не только города в административных границах.</span>
-            <a class="more" href="guangzhou.html">Подробнее»</a>
-        </div>
+            <div class="row justify-content-center mb-3">
+                <div class="col-12 col-sm-9 col-lg-7">
+                    <div class="card border-0 rounded-5 bg-secondary bg-opacity-50 p-3" id="feature">
+                        <img class="w-100 object-fit-cover rounded-5 mb-3" src="images/guangzhou.jpg" alt="Городская застройка Гуанчжоу" height="96">
+                        <h2 class="h5 text-center mb-3">
+                            Гуанчжоу — город в дельте Жемчужной реки
+                        </h2>
+                        <p class="col-12 col-sm-11 mx-auto mb-3">
+                            Гуанчжоу — крупный торговый и промышленный центр на юге Китая. Жилые кварталы, транспортные узлы и предприятия связывают его с соседними городами
+                            дельты Жемчужной реки и Шэньчжэнем. В рейтинге Demographia World Urban Areas за 2025 год объединённая территория Гуанчжоу-Шэньчжэнь занимает
+                            первое место: здесь живут 69 562 000 человек. Это население всей застроенной территории, а не только города в административных границах.
+                        </p>
+                        <a class="btn btn-primary btn-sm align-self-start" href="guangzhou.html">Подробнее »</a>
+                    </div>
+                </div>
+            </div>
 
-        <div class="cards">
-            <div class="card">
-                <img src="images/delhi.jpg" alt="Городская застройка Дели">
-                <b>Шанхай</b>
-                <span class="text">Порт и финансовый центр в дельте Янцзы. <a href="shanghai.html">Подробнее</a></span>
+            <div class="row justify-content-center mb-3">
+                <div class="col-12 col-sm-10">
+                    <div class="row justify-content-between g-3">
+                        <div class="col-12 col-sm-3 col-xl-2">
+                            <div class="card h-100 rounded-0 text-center p-2">
+                                <div class="col-12 col-sm-6 mx-auto mb-2">
+                                    <img class="w-100" src="images/delhi.jpg" alt="Городская застройка Дели">
+                                </div>
+                                <h2 class="h6 mb-1">Дели</h2>
+                                <p class="card-text small">
+                                    Исторический и культурный центр на севере Индии.
+                                    <a href="delhi.html">Подробнее</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-3 col-xl-2">
+                            <div class="card h-100 rounded-0 text-center p-2">
+                                <div class="col-12 col-sm-6 mx-auto mb-2">
+                                    <img class="w-100" src="images/mumbaj.jpg" alt="Набережная Марин-драйв в Мумбаи">
+                                </div>
+                                <h2 class="h6 mb-1">Мумбаи</h2>
+                                <p class="card-text small">
+                                    Крупный порт на западном побережье Индии.
+                                    <a href="mumbai.html">Подробнее</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-3 col-xl-2">
+                            <div class="card h-100 rounded-0 text-center p-2">
+                                <div class="col-12 col-sm-6 mx-auto mb-2">
+                                    <img class="w-100" src="images/dhaka.jpg" alt="Городская застройка Дакки">
+                                </div>
+                                <h2 class="h6 mb-1">Дакка</h2>
+                                <p class="card-text small">
+                                    Столица Бангладеш на реке Буриганга.
+                                    <a href="dhaka.html">Подробнее</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <img src="images/mumbaj.jpg" alt="Набережная Марин-драйв в Мумбаи">
-                <b>Шанхай</b>
-                <span class="text">Порт и финансовый центр в дельте Янцзы. <a href="shanghai.html">Подробнее</a></span>
-            </div>
-            <div class="card">
-                <img src="images/dhaka.jpg" alt="Городская застройка Дакки">
-                <b>Шанхай</b>
-                <span class="text">Порт и финансовый центр в дельте Янцзы. <a href="shanghai.html">Подробнее</a></span>
-            </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <span>Год: 2026</span>
-        <span>Группа: Б9124-09.03.04</span>
-        <span>Степанов Д.И.</span>
-    </footer>
-</body>
+        </main>
+    </body>
 </html>
